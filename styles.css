@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #25564b;
+}
+
+header .logo {
+    height: 70px; /* Smaller size for the logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem;
+    background-color: #fad400;
+}
+
+.hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    background-color: #fe7867;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#about, #services, #why-choose-us, #testimonials, #contact {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+/* Intro Section */
+#intro {
+    padding: 3rem 1.5rem;
+    background-color: #ffffff; /* White background to match the overall layout */
+    text-align: center;
+}
+
+#intro h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900; /* Match the style of the hero title */
+    font-size: 3rem; /* Increase size for prominence */
+    margin-bottom: 1rem;
+}
+
+#intro p {
+    font-size: 1.25rem; /* Match the paragraph size */
+    color: #333; /* Text color */
+    margin-bottom: 2rem; /* Spacing below the paragraph */
+}
+
+
+/* Container for the whole layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #25564b; /* Similar background to match the first image */
+}
+
+/* Text content styling */
+.text-content {
+    width: 41%;
+   
+}
+
+.text-content h1 {
+    font-size: 3em;
+    color: #ffffff;
+}
+
+.text-content p {
+    font-size: 1.2em;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Image content styling */
+.image-content {
+    width: 50%;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional to match styles */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+    }
+}
+
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #25564b;
+}
+
+.service-cards {
+    display: flex; /* Arrange service cards in a row */
+    justify-content: space-between; /* Space between each card */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 2rem; /* Space between each card */
+}
+
+.service-card {
+    background-color: #25564b;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1 1 18%; /* Flex property for responsive width */
+    display: flex;
+    flex-direction: column; /* Stack image, title, and description vertically */
+    align-items: center; /* Center content */
+    text-align: center;
+    min-width: 250px; /* Minimum width to maintain readability */
+}
+
+.service-card img {
+    width: 100%; /* Makes the image size responsive */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-card {
+        flex: 1 1 45%; /* Cards take more space on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        flex: 1 1 100%; /* Cards stack vertically on very small screens */
+    }
+
+    .service-card img {
+        max-width: 100px; /* Reduce image size further for very small screens */
+    }
+}
+
+.service-card .service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Styles for the Why Choose Us section */
+#why-choose-us {
+    padding: 3rem 1.5rem;
+    background-color: #ffffff; /* White background to match the overall layout */
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #25564b;
+    text-align: center;
+}
+
+.why-choose-us .features {
+    display: flex; /* Arrange feature cards in a row */
+    justify-content: space-between; /* Space between each card */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 2rem; /* Space between each card */
+    max-width: 1200px; /* Max width for the section */
+    margin: 0 auto; /* Center the section */
+}
+
+.why-choose-us .feature {
+    background-color: #25564b; /* Dark desaturated cyan background */
+    color: white; /* White text */
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1 1 30%; /* Responsive width for feature cards */
+    display: flex;
+    flex-direction: column; /* Stack icon, title, and description vertically */
+    align-items: center; /* Center content */
+    text-align: center;
+    min-width: 250px; /* Minimum width to maintain readability */
+}
+
+.why-choose-us .feature i {
+    font-size: 2rem; /* Size for the icons */
+    margin-bottom: 1rem; /* Space below the icon */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .why-choose-us .feature {
+        flex: 1 1 45%; /* Features take more space on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .why-choose-us .feature {
+        flex: 1 1 100%; /* Features stack vertically on very small screens */
+    }
+}
+
+
+/* Styling for the testimonials section */
+#testimonials {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    max-width: 1400px; /* Increased for larger screens */
+    margin: 0 auto; /* Center the section on the page */
+    text-align: left; /* Ensure the text is aligned to the left */
+}
+
+/* Testimonials title */
+#testimonials h2 {
+    font-size: 2.5em; /* Larger font size for big screens */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+}
+
+/* Styling for each testimonial block */
+#testimonials blockquote {
+    font-size: 1.4em; /* Slightly bigger font */
+    line-height: 1.8; /* Increased line height for readability */
+    color: #555;
+    margin: 20px 0;
+    padding-left: 25px; /* Increase padding for larger screens */
+    border-left: 4px solid #e74c3c;
+    display: inline-block; /* Align the blockquote next to the image */
+    max-width: 75%; /* Adjust width for larger screen alignment */
+}
+
+/* Testimonials citation (author name) */
+#testimonials cite {
+    display: block;
+    font-size: 1.2em; /* Increase font size for citation */
+    color: #777;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Image styling */
+#testimonials img {
+    float: right; /* Align the image to the right side of the block */
+    max-width: 180px; /* Increase image size */
+    height: auto;
+    margin-left: 25px; /* Increase spacing between image and text */
+    border-radius: 50%; /* Keep the image circular */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #testimonials {
+        max-width: 100%; /* Ensure the section adjusts to small screens */
+        padding: 20px;
+    }
+
+    #testimonials h2 {
+        font-size: 2em; /* Decrease title size for small screens */
+    }
+
+    #testimonials blockquote {
+        max-width: 100%; /* Ensure blockquote takes full width on small screens */
+        font-size: 1.2em;
+    }
+    
+    #testimonials img {
+        float: none; /* Remove floating on smaller screens */
+        display: block;
+        margin: 20px auto; /* Center the image on smaller screens */
+        max-width: 120px; /* Make image smaller for mobile */
+    }
+}
+
+
+#contact {
+    padding: 3rem 1.5rem;
+    background-color: #fe7867;
+    color: white;
+    display: flex; /* Use flexbox for side-by-side layout */
+    gap: 2rem; /* Space between the text and form */
+}
+
+#contact .contact-text {
+    flex: 1; /* Allow both sections to take equal space */
+    max-width: 50%; /* Ensure it takes exactly half of the space */
+    text-align: left; /* Align text to the left */
+}
+
+#contact h2 {
+    font-family: 'Fraunces', serif;
+    margin-bottom: 1rem;
+}
+
+#contact form {
+    flex: 1; /* Ensure the form takes up the remaining half */
+    max-width: 50%; /* Set to exactly half the width */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right; /* Align form items to the right */
+    margin: 0; /* Remove centering */
+}
+
+#contact input,
+#contact textarea {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    text-align: left; /* Keep input text left-aligned */
+}
+
+#contact button {
+    background-color: #fad400;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    align-self: flex-end; /* Align the button to the right */
+}
+
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #25564b;
+    color: white;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons img {
+    height: 24px;
+}
